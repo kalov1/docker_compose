@@ -1,0 +1,26 @@
+apt install docker.io
+docker images 
+docker ps    /включёные 
+docker ps -a /все 
+docker run --name test -d nginx
+docker stop/start ID
+docker rs ID    /удаление 
+docker run --name test -p 80:80 -p 8080:8080 -d nginx
+docker exex -it имя контейнера /bin/bash  /заходим в контейнер 
+ 
+nano Dockerfile 
+{
+FROM 
+COPY index.html /usr/share/nginx/html
+}
+nano index.html
+{
+<ntml>
+<head><title>HEllo</title>
+</head>
+<body>
+<h1>Hello word!</h1>
+</body>
+</html>
+{
+docker run --name test2 -p 80:80 -d ID
